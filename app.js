@@ -1,3 +1,7 @@
-console.log('test');
-
-console.log('안녕하세요!! 앞으로 열심히 같이해요1!!')
+//map
+// 배열안에 숫자들에 +1씩을 해주세요
+const test = [1,2,3,4,5]
+const addOne = test.map(v => {
+    return v + 1
+})
+console.log(addOne)
