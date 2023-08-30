@@ -1,4 +1,13 @@
 
+const obj = {
+  name:"alex",
+  age:33,
+  gender:"male",
+  hobby:["watching tv", "soccer", "swim"],
+  hasGirlFriend:true,
+
+}
+
 //*변수 할당* /
 practiceName = 'soyeon';
 
@@ -16,8 +25,8 @@ practiceGirlFriend = false;
 obj["personality"] = 'good';
 
 //*속성 삭제 */
-//delete obj.age;
-delete obj["age"];
+delete obj.age;
+//delete obj["age"];
 
 //*속성 수정 */
 //obj.hasGirlFriend = "false";
