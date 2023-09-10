@@ -52,6 +52,9 @@ const tt = ["korea","russia","japan","france","america","china","hongkong","engl
 //   }
 // })
 
+
+
+
 // << filter >>
 // filter는 반복문으로 원하는 조건에 맞는 값만 리턴해준다.
 
@@ -60,7 +63,7 @@ const tt = ["korea","russia","japan","france","america","china","hongkong","engl
 const ttr = tt.filter( v=>{
   return v.length >= 6
 })
-
+console.log(ttr)
 //-------------------->>map은 배열로 결과 값을 return해준다 중요!!
 
 
@@ -77,7 +80,33 @@ test.forEach(element => {
 
 //***혼자 공부해보기 */
 // << indexOf >>
-// 배연안에 원하는 값이 있다면 해당 값의 index를 리턴하고 값이 없다면 -1을 리턴한다
+// 배열안에 원하는 값이 있다면 해당 값의 index를 리턴하고 값이 없다면 -1을 리턴한다
+
+
+
+//배열 생성
+array = ['min', 'hope', 'jin', 'kok', 'hope'];
+
+array.indexOf('hope')// 같은 값이 있어도 가장 첫번 째 값 반환
+array.indexOf('hope',2); //==>결과 4, index값 3인 'jin'이후로 위치한 'hope'을 반환
+array.indexOf('suga')//존재하지 않는 값 -1 반환
+
+array.indexOf('kok',-1)// 시작점이 음수인 경우, 배열의 가장 끝 값을 -1로 잡고 왼쪽으로 갈수록 시작점값도 작아진다. 
+array.indexOf('kok',-2)// 하지만 이때 검색 방향은 왼쪽에서 오른쪽으로 동일하며 인덱스 값도 동일하다.**
+
+
+
+//함수로 예시
+function myfunction(){
+  if(array.indexOf('bts')!=-1){
+    console.log('bts있음');
+  }
+  console.log('bts없음');
+  
+}
+myfunction();
+
+
 
 
 // << concat >>
@@ -100,3 +129,6 @@ console.log(arrayResult)
 // includes 사용법 => 위에서 선언된 tt 베열에 'canada'가 있는지 확인하고 출력
 console.log(tt.includes('canada'));
 
+console.log(array.includes('bts'));
+console.log(array.includes('kok'));
+console.log(array.includes('hope'));
