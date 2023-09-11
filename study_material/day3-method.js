@@ -112,17 +112,26 @@ console.log(result);
 
 //계획 ==> 짝수인 값의 index번호를 가져오고 그 값들에 곱하기 2를 해준다
 
-const arr2 = [1,2,3,4,5,6,7,8,9,10];
+// 1) findIndex는 하나의 값만을 출력해준다, 반복문 필요.
+//    빈 배열을 선언하고 반복하면서 빼낸 값을 따로 담아줘야함.
+//    배열에 index 값을 담아주면서 바로 곱하기 2를 계산해서 담아주기.
+const arr1 = [1,2,3,4,5,6,7,8,9,10];
+const testArr = []
 
-//조건에 해당되는 index를 담아둘 배열 필요
-const Indexarr = []
-
-//findIndex는 하나의 요소만 가져온다, 반복문 필요
-for(index = 0; index< arr2.length; index++){
-  if(arr2[index]%2==0){
-    Indexarr.push(index*2); //해당되는 인덱스 값을 가져온 후 바로 계산해서 담기
+for(index = 0; index < arr1.length; index ++){
+  if(arr1[index]%2 ==0){
+    testArr.push(index*2);
   }
 }
+console.log(testArr)
 
+// 2) fillter와 map을 사용하기.
+//    조건에 맞는 값을 가져와 인덱스 값을 가져오기
+//    
 
-console.log(Indexarr)
+// .map([,index])==>처리할 요소의 인덱스
+const testArr2 = arr.map((v, index)=>{
+  if(v%2==0) return index*2 // 조건으로 걸러서 index값에 2곱해주기
+  
+}).filter((v) => v != undefined) //undefined가 아닌 값만 fillter
+console.log(testArr2)
